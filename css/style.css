@@ -86,7 +86,7 @@ li > a{
     font-style: oblique;
     font-size: 1.5rem;
     color: black;
-
+    transition: .5s ease;
 }
 li > a:hover{
     color: gold;
