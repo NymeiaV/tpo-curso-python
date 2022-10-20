@@ -84,7 +84,9 @@ form.addEventListener("submit", e=>{
     }
     else{
         alert("Mensaje enviado correctamente: ", true)
-        form.submit()
+        nombre.value = ""
+        email.value = ""
+        mensaje.value = ""
     }
 })
 
