@@ -3,14 +3,18 @@
 const apiURL = "https://api.mercadolibre.com/categories/MLA31045"
 
 async function obtenerNombres() {
+   try{
     const response = await fetch(apiURL)
     const data = await response.json()
-    console.log(data);
 
     document.getElementById("living").innerHTML = data.name
     document.getElementById("living-1").innerHTML = data["path_from_root"][0].name
     document.getElementById("living-2").innerHTML = data["path_from_root"][1].name
     document.getElementById("cant-living").innerHTML = `<b>Cantidad</b> de prod: ` + data["total_items_in_this_category"]
+   }
+   catch(error) {
+    console.log("Ocurrió un error grave", error);
+   }
 }
 obtenerNombres()
 
